@@ -123,6 +123,12 @@ position = Vector2(69.0625, 84.0625)
 scale = Vector2(0.0832291, 0.163992)
 texture = ExtResource("8_cpqy5")
 
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(569, 89)
+scale = Vector2(0.0832291, 0.163992)
+texture = ExtResource("8_cpqy5")
+
 [connection signal="pressed" from="Buttons/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="Buttons/SettingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="Buttons/QuitButton" to="." method="_on_quit_button_pressed"]
