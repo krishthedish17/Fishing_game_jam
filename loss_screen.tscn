@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://dsc1bn52v687x"]
 
-[ext_resource type="Script" path="res://fail_text.gd" id="1_xd804"]
+[ext_resource type="Script" path="res://using sprites/fail_text.gd" id="1_xwp1j"]
 [ext_resource type="Texture2D" uid="uid://8o3pn3y4i3kr" path="res://Loss screen sprites/fail_text-removebg-preview.png" id="2_6s81l"]
 
 [node name="loss screen" type="Node2D"]
-script = ExtResource("1_xd804")
+script = ExtResource("1_xwp1j")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(322, 88)
