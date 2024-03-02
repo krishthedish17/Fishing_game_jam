@@ -1,40 +1,263 @@
-[gd_scene load_steps=3 format=3 uid="uid://cma3fb05ei666"]
+[gd_scene load_steps=37 format=3 uid="uid://cma3fb05ei666"]
 
 [ext_resource type="Script" path="res://text_button_script.gd" id="1_icdk6"]
 [ext_resource type="PackedScene" uid="uid://dsc1bn52v687x" path="res://loss_screen.tscn" id="2_ewbws"]
+[ext_resource type="Texture2D" uid="uid://b0x338ms1axsr" path="res://using sprites/jeffs_phone.png" id="3_3owe2"]
+[ext_resource type="Texture2D" uid="uid://dm17fxky0ra18" path="res://using sprites/text box.png" id="4_job2y"]
+[ext_resource type="LabelSettings" uid="uid://nn2eowlcwvi7" path="res://Fonts/pixelft12.tres" id="5_vqks5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s2aha"]
+atlas = ExtResource("3_3owe2")
+region = Rect2(0, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xdofn"]
+atlas = ExtResource("3_3owe2")
+region = Rect2(200, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fsfko"]
+atlas = ExtResource("3_3owe2")
+region = Rect2(400, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jk0os"]
+atlas = ExtResource("3_3owe2")
+region = Rect2(600, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sa8ly"]
+atlas = ExtResource("3_3owe2")
+region = Rect2(800, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tejxc"]
+atlas = ExtResource("3_3owe2")
+region = Rect2(1000, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vol16"]
+atlas = ExtResource("3_3owe2")
+region = Rect2(0, 200, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kb4k7"]
+atlas = ExtResource("3_3owe2")
+region = Rect2(200, 200, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pt8d3"]
+atlas = ExtResource("3_3owe2")
+region = Rect2(400, 200, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8o4bv"]
+atlas = ExtResource("3_3owe2")
+region = Rect2(600, 200, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q84n7"]
+atlas = ExtResource("3_3owe2")
+region = Rect2(800, 200, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d4e6v"]
+atlas = ExtResource("3_3owe2")
+region = Rect2(1000, 200, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cado1"]
+atlas = ExtResource("3_3owe2")
+region = Rect2(0, 400, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uqxno"]
+atlas = ExtResource("3_3owe2")
+region = Rect2(200, 400, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lxf6a"]
+atlas = ExtResource("3_3owe2")
+region = Rect2(400, 400, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_evay0"]
+atlas = ExtResource("3_3owe2")
+region = Rect2(600, 400, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d46mp"]
+atlas = ExtResource("3_3owe2")
+region = Rect2(800, 400, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yooke"]
+atlas = ExtResource("3_3owe2")
+region = Rect2(1000, 400, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c7gv2"]
+atlas = ExtResource("3_3owe2")
+region = Rect2(0, 600, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jwhhv"]
+atlas = ExtResource("3_3owe2")
+region = Rect2(200, 600, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_352ve"]
+atlas = ExtResource("3_3owe2")
+region = Rect2(400, 600, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yxtdi"]
+atlas = ExtResource("3_3owe2")
+region = Rect2(600, 600, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0eg4r"]
+atlas = ExtResource("3_3owe2")
+region = Rect2(800, 600, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3a5ti"]
+atlas = ExtResource("3_3owe2")
+region = Rect2(1000, 600, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2urgo"]
+atlas = ExtResource("3_3owe2")
+region = Rect2(0, 800, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j8ahs"]
+atlas = ExtResource("3_3owe2")
+region = Rect2(200, 800, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tichx"]
+atlas = ExtResource("3_3owe2")
+region = Rect2(400, 800, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w48ld"]
+atlas = ExtResource("3_3owe2")
+region = Rect2(600, 800, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tqigu"]
+atlas = ExtResource("3_3owe2")
+region = Rect2(800, 800, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cuokl"]
+atlas = ExtResource("3_3owe2")
+region = Rect2(1000, 800, 200, 200)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_41t6h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s2aha")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xdofn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fsfko")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jk0os")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sa8ly")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tejxc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vol16")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kb4k7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pt8d3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8o4bv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q84n7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d4e6v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cado1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uqxno")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lxf6a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_evay0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d46mp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yooke")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c7gv2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jwhhv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_352ve")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yxtdi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0eg4r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3a5ti")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2urgo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j8ahs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tichx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w48ld")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tqigu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cuokl")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
 
 [node name="Start_of_game" type="Node2D"]
 script = ExtResource("1_icdk6")
 
 [node name="loss screen" parent="." instance=ExtResource("2_ewbws")]
-position = Vector2(7, 7)
+z_index = 1
+position = Vector2(9, 130)
 
 [node name="Button" type="Button" parent="."]
 offset_left = 7.0
 offset_top = 7.0
-offset_right = 88.0
+offset_right = 165.0
 offset_bottom = 38.0
 focus_neighbor_bottom = NodePath("../Button2")
 text = "Be casual"
 
 [node name="Button2" type="Button" parent="."]
-offset_left = 542.0
-offset_top = 9.0
-offset_right = 632.0
-offset_bottom = 40.0
+offset_left = 483.0
+offset_top = 6.0
+offset_right = 636.0
+offset_bottom = 37.0
 focus_neighbor_top = NodePath("../Button")
 text = "Be direct"
+clip_text = true
 
 [node name="Button3" type="Button" parent="."]
 offset_left = 9.0
 offset_top = 319.0
-offset_right = 90.0
+offset_right = 163.0
 offset_bottom = 350.0
 focus_neighbor_bottom = NodePath("../Button2")
 text = "Make a joke"
 
 [node name="Button4" type="Button" parent="."]
-offset_left = 512.0
+offset_left = 483.0
 offset_top = 321.0
 offset_right = 631.0
 offset_bottom = 352.0
@@ -43,11 +266,71 @@ text = "Be mysterious"
 
 [node name="wait_timer" type="Timer" parent="."]
 
-[node name="start_timer" type="Timer" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(316, 150.5)
+scale = Vector2(1.76, 2.065)
+sprite_frames = SubResource("SpriteFrames_41t6h")
+frame = 29
+frame_progress = 1.0
+
+[node name="messages" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="messages"]
+position = Vector2(416, 106)
+scale = Vector2(0.168, 0.233)
+texture = ExtResource("4_job2y")
+
+[node name="Label2" type="Label" parent="messages"]
+offset_left = 378.0
+offset_top = 91.0
+offset_right = 458.0
+offset_bottom = 112.0
+text = "What do you like?"
+label_settings = ExtResource("5_vqks5")
+horizontal_alignment = 1
+
+[node name="Sprite2D2" type="Sprite2D" parent="messages"]
+position = Vector2(232, 147)
+scale = Vector2(-0.168, 0.233)
+texture = ExtResource("4_job2y")
+
+[node name="Label" type="Label" parent="messages"]
+offset_left = 204.0
+offset_top = 132.0
+offset_right = 652.0
+offset_bottom = 234.0
+text = "Not funny"
+label_settings = ExtResource("5_vqks5")
+
+[node name="Sprite2D3" type="Sprite2D" parent="messages"]
+position = Vector2(415.996, 190.571)
+scale = Vector2(0.168, 0.233)
+texture = ExtResource("4_job2y")
+
+[node name="Label3" type="Label" parent="messages"]
+offset_left = 377.996
+offset_top = 175.571
+offset_right = 457.996
+offset_bottom = 196.571
+text = "What do you like?"
+label_settings = ExtResource("5_vqks5")
+horizontal_alignment = 1
+
+[node name="Sprite2D4" type="Sprite2D" parent="messages"]
+position = Vector2(231.996, 231.571)
+scale = Vector2(-0.168, 0.233)
+texture = ExtResource("4_job2y")
+
+[node name="Label4" type="Label" parent="messages"]
+offset_left = 203.996
+offset_top = 216.571
+offset_right = 651.996
+offset_bottom = 318.571
+text = "Not funny"
+label_settings = ExtResource("5_vqks5")
 
 [connection signal="pressed" from="Button" to="." method="_on_option_1_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_option_2_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
 [connection signal="timeout" from="wait_timer" to="." method="_on_wait_timer_timeout"]
-[connection signal="timeout" from="start_timer" to="." method="_on_start_timer_timeout"]
