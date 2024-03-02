@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://d1exly1cbo10v"]
+
+[ext_resource type="Script" path="res://game_scene.gd" id="1_e010t"]
+[ext_resource type="Script" path="res://story_text.gd" id="2_18y36"]
+[ext_resource type="FontFile" uid="uid://ktvsr73aivf6" path="res://Fonts/vcr_osd_mono/VCR_OSD_MONO_1.001.ttf" id="3_ymh6t"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_dbbru"]
+font = ExtResource("3_ymh6t")
+font_size = 15
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_e010t")
+
+[node name="PauseMenu" type="CanvasLayer" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = ExtResource("2_18y36")
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Node2D" type="Node2D" parent="ParallaxBackground/ParallaxLayer"]
+
+[node name="Label" type="Label" parent="ParallaxBackground/ParallaxLayer/Node2D"]
+offset_right = 704.0
+offset_bottom = 238.0
+text = "Mission briefing:
+
+
+Agent, your mission is to infiltrate and extract information condeming Adi
+Retheesh. You will do this by catfishing him online and then entering a call
+with him, where your goal is to acquire info that Retheesh is smuggling
+water into the city. As you know, we banned water recently to save the fish
+and so this is a very serious crime. Get caught, and well, it'll be nice knowing 
+you. Good luck, agent.
+
+Gameplay: This is a choice based game. You will get a certain amount of choices
+indicated by buttons on your screen when necessary. Click the buttons to 
+choose an action. If you select certain bad options you will end up losing, but 
+there are different ways to end this game (hint hint). Good luck and have fun!"
+label_settings = SubResource("LabelSettings_dbbru")
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="."]
+offset_left = 538.0
+offset_top = 8.0
+offset_right = 632.0
+offset_bottom = 39.0
+text = "Skip?"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="next_char" type="Timer" parent="."]
+
+[connection signal="timeout" from="next_char" to="ParallaxBackground" method="_on_next_char_timeout"]
