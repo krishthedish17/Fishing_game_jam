@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c4nalordjijrh"]
+[gd_scene load_steps=10 format=3 uid="uid://c4nalordjijrh"]
 
 [ext_resource type="Script" path="res://Menus/MainMenu/main_menu.gd" id="1_2ya0w"]
 [ext_resource type="Texture2D" uid="uid://cdwckr7ur4c6c" path="res://Resources/Sprites/icon.svg" id="2_gsih0"]
@@ -7,6 +7,7 @@
 [ext_resource type="StyleBox" uid="uid://doq33mqbb3i7r" path="res://Resources/Styles/Standard Button/standard_button_hover_style.tres" id="4_mxkqu"]
 [ext_resource type="LabelSettings" uid="uid://nn2eowlcwvi7" path="res://Fonts/pixelft12.tres" id="4_ueu5n"]
 [ext_resource type="StyleBox" uid="uid://dd6kvr76jafiq" path="res://Resources/Styles/Standard Button/standard_button_pressed_style.tres" id="5_virqm"]
+[ext_resource type="Texture2D" uid="uid://c3yy55xr2g10b" path="res://Screenshot 2024-02-27 164149.png" id="8_cpqy5"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_pghv5"]
 font = ExtResource("2_mmago")
@@ -109,6 +110,11 @@ theme_override_styles/normal = ExtResource("3_o7gka")
 theme_override_styles/hover = ExtResource("4_mxkqu")
 theme_override_styles/pressed = ExtResource("5_virqm")
 text = "QUIT"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(69.0625, 84.0625)
+scale = Vector2(0.0832291, 0.163992)
+texture = ExtResource("8_cpqy5")
 
 [connection signal="pressed" from="Buttons/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="Buttons/SettingsButton" to="." method="_on_settings_button_pressed"]
