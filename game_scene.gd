@@ -6,6 +6,7 @@ extends Node2D
 func _ready():
 	#Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	GlobalVariables.game_active = true
+	SettingsManager.load_config()
 
 
 func _input(_event):

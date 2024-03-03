@@ -1,9 +1,10 @@
-[gd_scene load_steps=17 format=3 uid="uid://crdic60rm5bqo"]
+[gd_scene load_steps=18 format=3 uid="uid://crdic60rm5bqo"]
 
 [ext_resource type="Script" path="res://truth ending.gd" id="1_aa73v"]
 [ext_resource type="Texture2D" uid="uid://5mw2o82065xe" path="res://using sprites/truth ending.png" id="2_cvnh3"]
 [ext_resource type="LabelSettings" uid="uid://dou8kp1d1fwd4" path="res://Fonts/ending_text.tres" id="3_mwse5"]
 [ext_resource type="Theme" uid="uid://dmlvt74ivoho2" path="res://Fonts/buttontheme.tres" id="4_kxite"]
+[ext_resource type="PackedScene" uid="uid://bdqaxlg8lxras" path="res://fade_in.tscn" id="5_00035"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f5bca"]
 atlas = ExtResource("2_cvnh3")
@@ -117,5 +118,9 @@ offset_right = 373.0
 offset_bottom = 232.0
 theme = ExtResource("4_kxite")
 text = "Return to menu?"
+
+[node name="fade in" parent="." instance=ExtResource("5_00035")]
+z_index = 2
+position = Vector2(304, 66)
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

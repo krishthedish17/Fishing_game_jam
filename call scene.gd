@@ -8,9 +8,10 @@ var ending = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	GlobalVariables.game_active = true
+	SettingsManager.load_config()
 	if GlobalVariables.text_question < 5:
 		GlobalVariables.text_question = 5
-	correct = 4
+	correct = GlobalVariables.text_question - 1
 	pressed = 4
 	GlobalVariables.action_picked = false
 	correct = 0
@@ -74,8 +75,8 @@ func _on_option_1_pressed():
 		GlobalVariables.action_picked = true
 		GlobalVariables.action_picked = true
 		correct += 1
-		$wait_timer.start(6)
-		await get_tree().create_timer(2.0).timeout
+		$wait_timer.start(4)
+		await get_tree().create_timer(0.5).timeout
 		$Label.text = "I'm feeling kinda sad right now"
 		$Sprite2D.visible = true
 		$Label.visible = true
@@ -336,6 +337,7 @@ func _on_button_3_pressed():
 		what made you think it would work now?"
 		GlobalVariables.action_picked = true
 		GlobalVariables.action_picked = true
+		correct = 4
 		$wait_timer.start(3.5)
 		await get_tree().create_timer(0.5).timeout
 		$Label.text = "Ya like jazz?"
@@ -355,6 +357,7 @@ func _on_button_3_pressed():
 		GlobalVariables.failed_text = "im not even gonna ask"
 		GlobalVariables.action_picked = true
 		GlobalVariables.action_picked = true
+		correct = 5
 		$wait_timer.start(4)
 		await get_tree().create_timer(0.5).timeout
 		$Sprite2D2.visible = false
@@ -376,6 +379,7 @@ func _on_button_3_pressed():
 		surely it will work the 7th"
 		GlobalVariables.action_picked = true
 		GlobalVariables.action_picked = true
+		correct = 6
 		$wait_timer.start(4)
 		await get_tree().create_timer(0.5).timeout
 		$Sprite2D2.visible = false
@@ -396,6 +400,7 @@ func _on_button_3_pressed():
 		GlobalVariables.failed_text = "atleast your happy"
 		GlobalVariables.action_picked = true
 		GlobalVariables.action_picked = true
+		correct = 7
 		$wait_timer.start(4)
 		await get_tree().create_timer(0.5).timeout
 		$Sprite2D2.visible = false
@@ -416,6 +421,7 @@ func _on_button_3_pressed():
 		GlobalVariables.failed_text = "atleast your happy"
 		GlobalVariables.action_picked = true
 		GlobalVariables.action_picked = true
+		correct = 8
 		$wait_timer.start(4)
 		await get_tree().create_timer(0.5).timeout
 		$Sprite2D2.visible = false
@@ -479,6 +485,7 @@ func _on_button_4_pressed():
 		GlobalVariables.failed_text = "He's a businessman, not a therapist"
 		GlobalVariables.action_picked = true
 		GlobalVariables.action_picked = true
+		correct = 4
 		$wait_timer.start(5)
 		await get_tree().create_timer(0.5).timeout
 		$Sprite2D2.visible = false

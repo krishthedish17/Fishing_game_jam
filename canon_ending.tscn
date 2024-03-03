@@ -1,17 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://di6025fnchgvf"]
+[gd_scene load_steps=6 format=3 uid="uid://di6025fnchgvf"]
 
 [ext_resource type="Script" path="res://canon_ending.gd" id="1_ecr8o"]
 [ext_resource type="Texture2D" uid="uid://cwjhecmct6hvr" path="res://using sprites/canon ending.png" id="1_k3mcn"]
 [ext_resource type="LabelSettings" uid="uid://dou8kp1d1fwd4" path="res://Fonts/ending_text.tres" id="2_6f0hy"]
 [ext_resource type="Theme" uid="uid://dmlvt74ivoho2" path="res://Fonts/buttontheme.tres" id="4_wraor"]
-
-[sub_resource type="Animation" id="Animation_ddnt5"]
-resource_name = "fade in"
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_rpkrd"]
-_data = {
-"fade in": SubResource("Animation_ddnt5")
-}
+[ext_resource type="PackedScene" uid="uid://bdqaxlg8lxras" path="res://fade_in.tscn" id="5_cpwjv"]
 
 [node name="canon ending" type="Node2D"]
 script = ExtResource("1_ecr8o")
@@ -39,13 +32,7 @@ offset_bottom = 347.0
 theme = ExtResource("4_wraor")
 text = "Return to menu"
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 646.0
-offset_bottom = 369.0
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_rpkrd")
-}
+[node name="fade in" parent="." instance=ExtResource("5_cpwjv")]
+z_index = 2
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

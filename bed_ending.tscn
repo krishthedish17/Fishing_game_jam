@@ -1,9 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://c0x2k1nvxsi4p"]
+[gd_scene load_steps=15 format=3 uid="uid://c0x2k1nvxsi4p"]
 
 [ext_resource type="Script" path="res://bed ending.gd" id="1_7hv51"]
 [ext_resource type="Texture2D" uid="uid://bkajmb7wyd7e6" path="res://using sprites/bed ending.png" id="2_q6ihd"]
 [ext_resource type="LabelSettings" uid="uid://dou8kp1d1fwd4" path="res://Fonts/ending_text.tres" id="3_md2bd"]
 [ext_resource type="Theme" uid="uid://dmlvt74ivoho2" path="res://Fonts/buttontheme.tres" id="4_dhnub"]
+[ext_resource type="PackedScene" uid="uid://bdqaxlg8lxras" path="res://fade_in.tscn" id="5_rbwf2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_01648"]
 atlas = ExtResource("2_q6ihd")
@@ -72,10 +73,14 @@ animations = [{
 [node name="bed ending" type="Node2D"]
 script = ExtResource("1_7hv51")
 
+[node name="fade in" parent="." instance=ExtResource("5_rbwf2")]
+z_index = 2
+position = Vector2(318, 68)
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(323, 108)
 sprite_frames = SubResource("SpriteFrames_1llor")
-frame_progress = 0.976131
+frame_progress = 0.0507106
 
 [node name="Label" type="Label" parent="."]
 offset_right = 644.0

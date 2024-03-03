@@ -4,6 +4,7 @@ var correct: int = 0
 var pressed: int = 0 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	SettingsManager.load_config()
 	GlobalVariables.game_active = true
 	$AnimatedSprite2D.play("default")
 	$messages/Sprite2D.visible = false
@@ -36,8 +37,6 @@ func _ready():
 		$messages/Label.visible = true
 		$messages/Label.text = "Hey"
 		$messages/Label2.text = "Hey"
-		$messages/Sprite2D3.visible = true
-		$messages/Label3.visible = true
 		$messages/Sprite2D4.visible = true
 		$messages/Label4.visible = true
 		$messages/ColorRect.visible = true
@@ -107,12 +106,14 @@ func _on_option_1_pressed():
 		GlobalVariables.action_picked = true
 		$wait_timer.start(3)
 		await get_tree().create_timer(1.0).timeout
-		$messages/Label3.text = "What do you like?"
+		$messages/Label3.text = "What do you 
+		like?"
 		$messages/Sprite2D3.visible = true
 		$messages/Label3.visible = true
 		$"message sound".play()
 		await get_tree().create_timer(1.0).timeout
-		$messages/Label4.text = "Well, to begin..."
+		$messages/Label4.text = "Well, to 
+		begin..."
 		$messages/Sprite2D4.visible = true
 		$messages/Label4.visible = true
 		$"message sound".play()
@@ -136,7 +137,8 @@ func _on_option_1_pressed():
 		$messages/Sprite2D.visible = true
 		$messages/Label2.visible = true
 		await get_tree().create_timer(1.0).timeout
-		$messages/Label.text = "srsly? ur blocked"
+		$messages/Label.text = "srsly? ur 
+		blocked"
 		$messages/Sprite2D2.visible = true
 		$messages/Label.visible = true
 		$"message sound".play()
@@ -203,7 +205,8 @@ func _on_option_2_pressed():
 		$messages/ColorRect.visible = false
 		$messages/Sprite2D5.visible = false
 		$messages/Label5.visible = false
-		$messages/Label2.text = "u wanna know smth cool?"
+		$messages/Label2.text = "u wanna know 
+		smth cool?"
 		$messages/Sprite2D.visible = true
 		$messages/Label2.visible = true
 		$"message sound".play()
@@ -247,8 +250,9 @@ func _on_button_3_pressed():
 		$messages/Label.visible = true
 		$"message sound".play()
 	if GlobalVariables.text_question == 2:
-		GlobalVariables.failed_text = "I don't think he found it funny"
+		GlobalVariables.failed_text = "if only u knew better jokes"
 		GlobalVariables.action_picked = true
+		correct = 1
 		$wait_timer.start(3)
 		await get_tree().create_timer(1.0).timeout
 		$messages/Label3.text = "Ya like jazz?"
@@ -279,7 +283,7 @@ func _on_button_3_pressed():
 		$messages/Label2.visible = true
 		$"message sound".play()
 		await get_tree().create_timer(1.0).timeout
-		$messages/Label.text = "really?"
+		$messages/Label.text = "I hate jazz"
 		$messages/Sprite2D2.visible = true
 		$messages/Label.visible = true
 		$"message sound".play()
