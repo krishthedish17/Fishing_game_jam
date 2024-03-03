@@ -1,10 +1,12 @@
-[gd_scene load_steps=37 format=3 uid="uid://cma3fb05ei666"]
+[gd_scene load_steps=39 format=3 uid="uid://cma3fb05ei666"]
 
 [ext_resource type="Script" path="res://text_button_script.gd" id="1_icdk6"]
 [ext_resource type="PackedScene" uid="uid://dsc1bn52v687x" path="res://loss_screen.tscn" id="2_ewbws"]
 [ext_resource type="Texture2D" uid="uid://b0x338ms1axsr" path="res://using sprites/jeffs_phone.png" id="3_3owe2"]
 [ext_resource type="Texture2D" uid="uid://dm17fxky0ra18" path="res://using sprites/text box.png" id="4_job2y"]
 [ext_resource type="LabelSettings" uid="uid://nn2eowlcwvi7" path="res://Fonts/pixelft12.tres" id="5_vqks5"]
+[ext_resource type="Texture2D" uid="uid://btdten2k5tnnf" path="res://using sprites/female_idle.png" id="6_husug"]
+[ext_resource type="Texture2D" uid="uid://cahplvt4x0wae" path="res://using sprites/water_stealer_idle_animation.png" id="7_wyile"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s2aha"]
 atlas = ExtResource("3_3owe2")
@@ -229,7 +231,7 @@ script = ExtResource("1_icdk6")
 
 [node name="loss screen" parent="." instance=ExtResource("2_ewbws")]
 z_index = 1
-position = Vector2(9, 130)
+position = Vector2(-12, 76)
 
 [node name="Button" type="Button" parent="."]
 offset_left = 7.0
@@ -285,7 +287,6 @@ offset_left = 378.0
 offset_top = 91.0
 offset_right = 458.0
 offset_bottom = 112.0
-text = "What do you like?"
 label_settings = ExtResource("5_vqks5")
 horizontal_alignment = 1
 
@@ -299,13 +300,38 @@ offset_left = 204.0
 offset_top = 132.0
 offset_right = 652.0
 offset_bottom = 234.0
-text = "Not funny"
 label_settings = ExtResource("5_vqks5")
 
 [node name="Sprite2D3" type="Sprite2D" parent="messages"]
 position = Vector2(415.996, 190.571)
 scale = Vector2(0.168, 0.233)
 texture = ExtResource("4_job2y")
+
+[node name="ColorRect" type="ColorRect" parent="messages"]
+offset_left = 400.0
+offset_top = 254.0
+offset_right = 454.0
+offset_bottom = 304.0
+
+[node name="Sprite2D" type="Sprite2D" parent="messages/ColorRect"]
+position = Vector2(25, 26)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("6_husug")
+region_enabled = true
+region_rect = Rect2(37, 40, 452, 467)
+
+[node name="ColorRect2" type="ColorRect" parent="messages"]
+offset_left = 199.0
+offset_top = 115.0
+offset_right = 253.0
+offset_bottom = 165.0
+
+[node name="Sprite2D" type="Sprite2D" parent="messages/ColorRect2"]
+position = Vector2(25, 26)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("7_wyile")
+region_enabled = true
+region_rect = Rect2(1023, 7, 493, 499)
 
 [node name="Label3" type="Label" parent="messages"]
 offset_left = 377.996
@@ -326,8 +352,24 @@ offset_left = 203.996
 offset_top = 216.571
 offset_right = 651.996
 offset_bottom = 318.571
-text = "Not funny"
+text = "Can u send
+a picture?"
 label_settings = ExtResource("5_vqks5")
+
+[node name="Sprite2D5" type="Sprite2D" parent="messages"]
+position = Vector2(235, 335)
+scale = Vector2(-0.168, 0.233)
+texture = ExtResource("4_job2y")
+
+[node name="Label5" type="Label" parent="messages"]
+offset_left = 228.0
+offset_top = 321.0
+offset_right = 676.0
+offset_bottom = 423.0
+text = "Oh"
+label_settings = ExtResource("5_vqks5")
+
+[node name="PauseMenu" type="CanvasLayer" parent="."]
 
 [connection signal="pressed" from="Button" to="." method="_on_option_1_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_option_2_pressed"]

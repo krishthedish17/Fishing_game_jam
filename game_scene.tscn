@@ -47,10 +47,11 @@ offset_left = 538.0
 offset_top = 8.0
 offset_right = 632.0
 offset_bottom = 39.0
-text = "Skip?"
+text = "Start"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
 [node name="next_char" type="Timer" parent="."]
 
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="timeout" from="next_char" to="ParallaxBackground" method="_on_next_char_timeout"]

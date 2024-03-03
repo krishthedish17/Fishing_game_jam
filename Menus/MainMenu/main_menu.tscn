@@ -5,13 +5,16 @@
 [ext_resource type="FontFile" uid="uid://ktvsr73aivf6" path="res://Fonts/vcr_osd_mono/VCR_OSD_MONO_1.001.ttf" id="2_mmago"]
 [ext_resource type="StyleBox" uid="uid://c2nqiwudvaseb" path="res://Resources/Styles/Standard Button/standard_button_normal_style.tres" id="3_o7gka"]
 [ext_resource type="StyleBox" uid="uid://doq33mqbb3i7r" path="res://Resources/Styles/Standard Button/standard_button_hover_style.tres" id="4_mxkqu"]
-[ext_resource type="LabelSettings" uid="uid://nn2eowlcwvi7" path="res://Fonts/pixelft12.tres" id="4_ueu5n"]
 [ext_resource type="StyleBox" uid="uid://dd6kvr76jafiq" path="res://Resources/Styles/Standard Button/standard_button_pressed_style.tres" id="5_virqm"]
 [ext_resource type="Texture2D" uid="uid://c3yy55xr2g10b" path="res://Screenshot 2024-02-27 164149.png" id="8_cpqy5"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_pghv5"]
 font = ExtResource("2_mmago")
 font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_nuxgi"]
+font = ExtResource("2_mmago")
+font_size = 50
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -54,7 +57,7 @@ theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 2
 theme_override_font_sizes/font_size = 32
 text = "Catfish(ing)"
-label_settings = ExtResource("4_ueu5n")
+label_settings = SubResource("LabelSettings_nuxgi")
 vertical_alignment = 1
 
 [node name="MadeByLabel" type="Label" parent="."]
