@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwx0fp6de4kvw"]
+
+[ext_resource type="Script" path="res://call scene.gd" id="1_nq7ph"]
+[ext_resource type="Texture2D" uid="uid://c6pw0rffdjt2x" path="res://using sprites/video background catfish game.png" id="2_rah6k"]
+
+[node name="call scene" type="Node2D"]
+script = ExtResource("1_nq7ph")
+
+[node name="PauseMenu" type="CanvasLayer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(319, 179)
+scale = Vector2(1.03, 0.9)
+texture = ExtResource("2_rah6k")
