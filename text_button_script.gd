@@ -44,6 +44,11 @@ func _ready():
 		$messages/Label5.visible = true
 		$messages/Label3.text = "Can you send a picture?"
 		$messages/Label5.text = "Oh"
+	if GlobalVariables.text_question == 4:
+		$messages/Sprite2D.visible = true
+		$messages/Label2.visible = true
+		$messages/Label2.text = "can I see u?"
+		$messages/ColorRect2.visible = true
 	GlobalVariables.action_picked = false
 	
 
@@ -64,8 +69,8 @@ func _process(delta):
 		$Button3.text = "Make a joke"
 		$Button4.text = "Wait"
 	elif GlobalVariables.text_question == 3:
-		$Button.text = "Pretend to care"
-		$Button2.text = "Call him stupid"
+		$Button.text = "Friendzone"
+		$Button2.text = "Tell him a secret"
 		$Button3.text = "Make a joke"
 		$Button4.text = "Ask for his picture"
 	elif GlobalVariables.text_question == 4:
@@ -103,7 +108,7 @@ func _on_option_1_pressed():
 		$messages/Sprite2D4.visible = true
 		$messages/Label4.visible = true
 	if GlobalVariables.text_question == 3 && pressed == 3:
-		GlobalVariables.failed_text = "option a"
+		GlobalVariables.failed_text = "why did u think that would work"
 		GlobalVariables.action_picked = true
 		$wait_timer.start(3)
 		await get_tree().create_timer(1.0).timeout
@@ -116,11 +121,12 @@ func _on_option_1_pressed():
 		$messages/ColorRect.visible = false
 		$messages/Sprite2D5.visible = false
 		$messages/Label5.visible = false
-		$messages/Label2.text = "question 3a"
+		$messages/Label2.text = "U seem like a
+		good friend"
 		$messages/Sprite2D.visible = true
 		$messages/Label2.visible = true
 		await get_tree().create_timer(1.0).timeout
-		$messages/Label.text = "response 3a"
+		$messages/Label.text = "srsly? ur blocked"
 		$messages/Sprite2D2.visible = true
 		$messages/Label.visible = true
 	if GlobalVariables.text_question == 4 && pressed == 4:
@@ -167,7 +173,7 @@ func _on_option_2_pressed():
 		$messages/Sprite2D4.visible = true
 		$messages/Label4.visible = true
 	if GlobalVariables.text_question == 3 && pressed == 3:
-		GlobalVariables.failed_text = "option b"
+		GlobalVariables.failed_text = "guess he didnt care"
 		GlobalVariables.action_picked = true
 		$wait_timer.start(3)
 		await get_tree().create_timer(1.0).timeout
@@ -180,11 +186,11 @@ func _on_option_2_pressed():
 		$messages/ColorRect.visible = false
 		$messages/Sprite2D5.visible = false
 		$messages/Label5.visible = false
-		$messages/Label2.text = "question 3b"
+		$messages/Label2.text = "u wanna know smth cool?"
 		$messages/Sprite2D.visible = true
 		$messages/Label2.visible = true
 		await get_tree().create_timer(1.0).timeout
-		$messages/Label.text = "response 3b"
+		$messages/Label.text = "rot really?"
 		$messages/Sprite2D2.visible = true
 		$messages/Label.visible = true
 	if GlobalVariables.text_question == 4 && pressed == 4:

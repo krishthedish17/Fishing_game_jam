@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dsc1bn52v687x"]
 
 [ext_resource type="Script" path="res://using sprites/fail_text.gd" id="1_xwp1j"]
-[ext_resource type="Texture2D" uid="uid://8o3pn3y4i3kr" path="res://Loss screen sprites/fail_text-removebg-preview.png" id="2_6s81l"]
+[ext_resource type="Texture2D" uid="uid://ddj5tm1clclkv" path="res://using sprites/fail screen real omg.png" id="3_l5qln"]
 [ext_resource type="FontFile" uid="uid://ktvsr73aivf6" path="res://Fonts/vcr_osd_mono/VCR_OSD_MONO_1.001.ttf" id="3_x5j0t"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_pmdj7"]
@@ -30,6 +30,14 @@ text = "Return to last choice"
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(334, 103)
 scale = Vector2(1.11778, 1.06889)
-texture = ExtResource("2_6s81l")
+texture = ExtResource("3_l5qln")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+offset_left = 2.0
+offset_right = 42.0
+offset_bottom = 40.0
+scale = Vector2(15.9378, 8.93671)
+color = Color(0, 0, 0, 0.266667)
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
