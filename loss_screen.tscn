@@ -11,10 +11,6 @@ font_size = 20
 [node name="loss screen" type="Node2D"]
 script = ExtResource("1_xwp1j")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(322, 88)
-texture = ExtResource("2_6s81l")
-
 [node name="Label" type="Label" parent="."]
 offset_left = 146.0
 offset_top = 167.0
@@ -30,5 +26,10 @@ offset_top = 191.0
 offset_right = 419.0
 offset_bottom = 222.0
 text = "Return to last choice"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(334, 103)
+scale = Vector2(1.11778, 1.06889)
+texture = ExtResource("2_6s81l")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
