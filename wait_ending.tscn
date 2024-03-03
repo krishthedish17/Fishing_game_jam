@@ -1,0 +1,69 @@
+[gd_scene load_steps=8 format=3 uid="uid://ckk1ithrqjwqm"]
+
+[ext_resource type="Script" path="res://wait_ending.gd" id="1_1yc2l"]
+[ext_resource type="Texture2D" uid="uid://b7ebgc17u3xx1" path="res://using sprites/wait ending.png" id="1_vumlf"]
+[ext_resource type="LabelSettings" uid="uid://dou8kp1d1fwd4" path="res://Fonts/ending_text.tres" id="3_mrqko"]
+[ext_resource type="Theme" uid="uid://dmlvt74ivoho2" path="res://Fonts/buttontheme.tres" id="4_u18r5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rc7cm"]
+atlas = ExtResource("1_vumlf")
+region = Rect2(0, 0, 570, 570)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uvtad"]
+atlas = ExtResource("1_vumlf")
+region = Rect2(570, 0, 570, 570)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w1w6n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rc7cm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uvtad")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="wait ending" type="Node2D"]
+script = ExtResource("1_1yc2l")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(318, 144)
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_w1w6n")
+autoplay = "default"
+frame_progress = 0.598095
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(-106, 146)
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_w1w6n")
+frame_progress = 0.598095
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
+position = Vector2(745, 143)
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_w1w6n")
+frame_progress = 0.598095
+
+[node name="Label" type="Label" parent="."]
+offset_top = 18.0
+offset_right = 1150.0
+offset_bottom = 96.0
+text = "ENDING 4: YOUR BATTERY DIED
+you failed to catch Jeff 
+because you took too long"
+label_settings = ExtResource("3_mrqko")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 220.0
+offset_top = 303.0
+offset_right = 429.0
+offset_bottom = 334.0
+theme = ExtResource("4_u18r5")
+text = "Return to menu?"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

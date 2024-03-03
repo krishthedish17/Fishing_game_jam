@@ -25,6 +25,7 @@ GlobalVariables="*res://Autoloads/GlobalVariables.gd"
 SettingsManager="*res://Autoloads/SettingsManager.gd"
 AudioManager="*res://Autoloads/AudioManager.gd"
 SaveManager="*res://Autoloads/SaveManager.gd"
+Music="*res://music.tscn"
 
 [display]
 

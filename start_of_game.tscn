@@ -1,12 +1,15 @@
-[gd_scene load_steps=40 format=3 uid="uid://cma3fb05ei666"]
+[gd_scene load_steps=43 format=3 uid="uid://cma3fb05ei666"]
 
 [ext_resource type="Script" path="res://text_button_script.gd" id="1_icdk6"]
 [ext_resource type="PackedScene" uid="uid://dsc1bn52v687x" path="res://loss_screen.tscn" id="2_ewbws"]
 [ext_resource type="Texture2D" uid="uid://b0x338ms1axsr" path="res://using sprites/jeffs_phone.png" id="3_3owe2"]
+[ext_resource type="Theme" uid="uid://dmlvt74ivoho2" path="res://Fonts/buttontheme.tres" id="3_acra5"]
 [ext_resource type="Texture2D" uid="uid://dm17fxky0ra18" path="res://using sprites/text box.png" id="4_job2y"]
 [ext_resource type="FontFile" uid="uid://ktvsr73aivf6" path="res://Fonts/vcr_osd_mono/VCR_OSD_MONO_1.001.ttf" id="5_f58ab"]
 [ext_resource type="Texture2D" uid="uid://btdten2k5tnnf" path="res://using sprites/female_idle.png" id="6_husug"]
 [ext_resource type="Texture2D" uid="uid://cahplvt4x0wae" path="res://using sprites/water_stealer_idle_animation.png" id="7_wyile"]
+[ext_resource type="Texture2D" uid="uid://bbxm8xl3slodf" path="res://using sprites/tan color.jpg" id="8_ybde2"]
+[ext_resource type="AudioStream" uid="uid://dj7us4q2fikwq" path="res://Soundfx/Message fx.mp3" id="10_e88ws"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s2aha"]
 atlas = ExtResource("3_3owe2")
@@ -244,6 +247,7 @@ offset_top = 7.0
 offset_right = 165.0
 offset_bottom = 38.0
 focus_neighbor_bottom = NodePath("../Button2")
+theme = ExtResource("3_acra5")
 text = "Be casual"
 
 [node name="Button2" type="Button" parent="."]
@@ -252,6 +256,7 @@ offset_top = 6.0
 offset_right = 636.0
 offset_bottom = 37.0
 focus_neighbor_top = NodePath("../Button")
+theme = ExtResource("3_acra5")
 text = "Be direct"
 clip_text = true
 
@@ -261,6 +266,7 @@ offset_top = 319.0
 offset_right = 163.0
 offset_bottom = 350.0
 focus_neighbor_bottom = NodePath("../Button2")
+theme = ExtResource("3_acra5")
 text = "Make a joke"
 
 [node name="Button4" type="Button" parent="."]
@@ -269,6 +275,7 @@ offset_top = 321.0
 offset_right = 631.0
 offset_bottom = 352.0
 focus_neighbor_bottom = NodePath("../Button2")
+theme = ExtResource("3_acra5")
 text = "Be mysterious"
 
 [node name="wait_timer" type="Timer" parent="."]
@@ -390,6 +397,15 @@ text = "Oh"
 label_settings = SubResource("LabelSettings_mhudm")
 
 [node name="PauseMenu" type="CanvasLayer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(146, 149)
+scale = Vector2(4.48571, -2.66667)
+texture = ExtResource("8_ybde2")
+
+[node name="message sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_e88ws")
 
 [connection signal="pressed" from="Button" to="." method="_on_option_1_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_option_2_pressed"]

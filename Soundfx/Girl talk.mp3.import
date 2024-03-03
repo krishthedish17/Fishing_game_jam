@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bd8q7prvtnutv"
+path="res://.godot/imported/Girl talk.mp3-d9faeb50a4882d8202a4a6d0ec61a739.mp3str"
+
+[deps]
+
+source_file="res://Soundfx/Girl talk.mp3"
+dest_files=["res://.godot/imported/Girl talk.mp3-d9faeb50a4882d8202a4a6d0ec61a739.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

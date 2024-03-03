@@ -15,3 +15,5 @@ var text_question: int = 1
 var failed: bool = false
 var failed_text = ""
 var action_picked: bool = true
+var correct: int = 0
+var pressed: int = 0

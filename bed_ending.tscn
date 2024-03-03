@@ -1,0 +1,96 @@
+[gd_scene load_steps=14 format=3 uid="uid://c0x2k1nvxsi4p"]
+
+[ext_resource type="Script" path="res://bed ending.gd" id="1_7hv51"]
+[ext_resource type="Texture2D" uid="uid://bkajmb7wyd7e6" path="res://using sprites/bed ending.png" id="2_q6ihd"]
+[ext_resource type="LabelSettings" uid="uid://dou8kp1d1fwd4" path="res://Fonts/ending_text.tres" id="3_md2bd"]
+[ext_resource type="Theme" uid="uid://dmlvt74ivoho2" path="res://Fonts/buttontheme.tres" id="4_dhnub"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_01648"]
+atlas = ExtResource("2_q6ihd")
+region = Rect2(0, 0, 499, 499)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smqip"]
+atlas = ExtResource("2_q6ihd")
+region = Rect2(499, 0, 499, 499)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5s0ic"]
+atlas = ExtResource("2_q6ihd")
+region = Rect2(998, 0, 499, 499)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gl3px"]
+atlas = ExtResource("2_q6ihd")
+region = Rect2(0, 499, 499, 499)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d82ki"]
+atlas = ExtResource("2_q6ihd")
+region = Rect2(499, 499, 499, 499)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2pwqv"]
+atlas = ExtResource("2_q6ihd")
+region = Rect2(998, 499, 499, 499)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xx5i1"]
+atlas = ExtResource("2_q6ihd")
+region = Rect2(0, 998, 499, 499)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gsbwi"]
+atlas = ExtResource("2_q6ihd")
+region = Rect2(499, 998, 499, 499)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1llor"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_01648")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smqip")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5s0ic")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gl3px")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d82ki")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2pwqv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xx5i1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gsbwi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="bed ending" type="Node2D"]
+script = ExtResource("1_7hv51")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(323, 108)
+sprite_frames = SubResource("SpriteFrames_1llor")
+frame_progress = 0.976131
+
+[node name="Label" type="Label" parent="."]
+offset_right = 644.0
+offset_bottom = 117.0
+text = "Ending 2: He is never caught
+and enjoys his day. You are
+fired for incompetence"
+label_settings = ExtResource("3_md2bd")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 260.0
+offset_top = 252.0
+offset_right = 398.0
+offset_bottom = 283.0
+theme = ExtResource("4_dhnub")
+text = "Return to menu?"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

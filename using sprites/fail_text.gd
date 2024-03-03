@@ -14,6 +14,11 @@ func _process(delta):
 
 
 func _on_button_pressed():
-	get_tree().change_scene_to_file("res://start_of_game.tscn")
-	self.visible = false
-	GlobalVariables.failed = false
+	if GlobalVariables.text_question <= 4:
+		get_tree().change_scene_to_file("res://start_of_game.tscn")
+		self.visible = false
+		GlobalVariables.failed = false
+	elif GlobalVariables.text_question >= 5:
+		get_tree().change_scene_to_file("res://call_scene.tscn")
+		self.visible = false
+		GlobalVariables.failed = false
