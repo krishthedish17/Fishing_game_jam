@@ -1,16 +1,21 @@
 [gd_scene load_steps=12 format=3 uid="uid://di60wanbtymov"]
 
 [ext_resource type="Script" path="res://Menus/SettingsMenu/settings_menu.gd" id="1_0u47g"]
+[ext_resource type="FontFile" uid="uid://ktvsr73aivf6" path="res://Fonts/vcr_osd_mono/VCR_OSD_MONO_1.001.ttf" id="2_f3166"]
 [ext_resource type="Texture2D" uid="uid://bq57kcmnv8ggp" path="res://Resources/Sprites/CheckBox/checkbox_normal.png" id="4_fjjgy"]
 [ext_resource type="Texture2D" uid="uid://bl7gtlqdfuvc5" path="res://Resources/Sprites/CheckBox/checkbox_pressed.png" id="5_e5prm"]
 [ext_resource type="Texture2D" uid="uid://ds1i31tr5wqrh" path="res://Resources/Sprites/icon_16px.png" id="6_1cbd4"]
+[ext_resource type="Theme" uid="uid://dmlvt74ivoho2" path="res://Fonts/buttontheme.tres" id="6_gaca7"]
 [ext_resource type="Texture2D" uid="uid://c1sklka53w4ud" path="res://Resources/Sprites/CheckBox/checkbox_hover.png" id="6_i8nqj"]
-[ext_resource type="StyleBox" uid="uid://c2nqiwudvaseb" path="res://Resources/Styles/Standard Button/standard_button_normal_style.tres" id="6_wrgi0"]
-[ext_resource type="StyleBox" uid="uid://doq33mqbb3i7r" path="res://Resources/Styles/Standard Button/standard_button_hover_style.tres" id="7_4yotx"]
-[ext_resource type="StyleBox" uid="uid://dd6kvr76jafiq" path="res://Resources/Styles/Standard Button/standard_button_pressed_style.tres" id="8_vwleo"]
 
 [sub_resource type="FontVariation" id="FontVariation_xbj33"]
 variation_embolden = 2.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_t3ccm"]
+font = ExtResource("2_f3166")
+font_size = 40
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 1)
 
 [sub_resource type="ImageTexture" id="ImageTexture_58v6b"]
 
@@ -52,6 +57,7 @@ offset_bottom = 54.0
 theme_override_fonts/font = SubResource("FontVariation_xbj33")
 theme_override_font_sizes/font_size = 32
 text = "SETTINGS"
+label_settings = SubResource("LabelSettings_t3ccm")
 horizontal_alignment = 1
 
 [node name="FullscreenButton" type="TextureButton" parent="."]
@@ -199,14 +205,7 @@ offset_left = 258.0
 offset_top = 297.0
 offset_right = 386.0
 offset_bottom = 326.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_styles/normal = ExtResource("6_wrgi0")
-theme_override_styles/hover = ExtResource("7_4yotx")
-theme_override_styles/pressed = ExtResource("8_vwleo")
+theme = ExtResource("6_gaca7")
 text = "BACK"
 
 [connection signal="toggled" from="FullscreenButton" to="." method="_on_fullscreen_button_toggled"]

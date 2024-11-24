@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dj7us4q2fikwq"
+path="res://.godot/imported/Message fx.mp3-cf3da39f2a3248cd601dbf024d615386.mp3str"
+
+[deps]
+
+source_file="res://Soundfx/Message fx.mp3"
+dest_files=["res://.godot/imported/Message fx.mp3-cf3da39f2a3248cd601dbf024d615386.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

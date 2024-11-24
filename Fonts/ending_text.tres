@@ -1,0 +1,10 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://dou8kp1d1fwd4"]
+
+[ext_resource type="FontFile" uid="uid://ktvsr73aivf6" path="res://Fonts/vcr_osd_mono/VCR_OSD_MONO_1.001.ttf" id="1_267a7"]
+
+[resource]
+font = ExtResource("1_267a7")
+font_size = 40
+font_color = Color(1, 0, 0, 1)
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 1)

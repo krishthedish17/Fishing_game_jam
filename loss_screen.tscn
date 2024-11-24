@@ -1,19 +1,48 @@
-[gd_scene load_steps=3 format=3 uid="uid://dsc1bn52v687x"]
+[gd_scene load_steps=6 format=3 uid="uid://dsc1bn52v687x"]
 
-[ext_resource type="Script" path="res://fail_text.gd" id="1_xd804"]
-[ext_resource type="Texture2D" uid="uid://8o3pn3y4i3kr" path="res://Loss screen sprites/fail_text-removebg-preview.png" id="2_6s81l"]
+[ext_resource type="Script" path="res://using sprites/fail_text.gd" id="1_xwp1j"]
+[ext_resource type="Texture2D" uid="uid://ddj5tm1clclkv" path="res://using sprites/fail screen real omg.png" id="3_l5qln"]
+[ext_resource type="Theme" uid="uid://dmlvt74ivoho2" path="res://Fonts/buttontheme.tres" id="3_n0aj3"]
+[ext_resource type="FontFile" uid="uid://ktvsr73aivf6" path="res://Fonts/vcr_osd_mono/VCR_OSD_MONO_1.001.ttf" id="3_x5j0t"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7rua5"]
+font = ExtResource("3_x5j0t")
+font_size = 20
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
 
 [node name="loss screen" type="Node2D"]
-script = ExtResource("1_xd804")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(322, 88)
-texture = ExtResource("2_6s81l")
+script = ExtResource("1_xwp1j")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 180.0
-offset_top = 165.0
-offset_right = 495.0
-offset_bottom = 191.0
+offset_left = 146.0
+offset_top = 167.0
+offset_right = 615.0
+offset_bottom = 193.0
 rotation = -0.0715649
 text = "Did you seriously think that would work?"
+label_settings = SubResource("LabelSettings_7rua5")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 246.0
+offset_top = 258.0
+offset_right = 413.0
+offset_bottom = 289.0
+theme = ExtResource("3_n0aj3")
+text = "Return to last choice"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(334, 103)
+scale = Vector2(1.11778, 1.06889)
+texture = ExtResource("3_l5qln")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+offset_left = 2.0
+offset_right = 42.0
+offset_bottom = 40.0
+scale = Vector2(15.9378, 8.93671)
+mouse_filter = 2
+color = Color(0, 0, 0, 0.266667)
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,126 @@
+[gd_scene load_steps=18 format=3 uid="uid://crdic60rm5bqo"]
+
+[ext_resource type="Script" path="res://truth ending.gd" id="1_aa73v"]
+[ext_resource type="Texture2D" uid="uid://5mw2o82065xe" path="res://using sprites/truth ending.png" id="2_cvnh3"]
+[ext_resource type="LabelSettings" uid="uid://dou8kp1d1fwd4" path="res://Fonts/ending_text.tres" id="3_mwse5"]
+[ext_resource type="Theme" uid="uid://dmlvt74ivoho2" path="res://Fonts/buttontheme.tres" id="4_kxite"]
+[ext_resource type="PackedScene" uid="uid://bdqaxlg8lxras" path="res://fade_in.tscn" id="5_00035"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f5bca"]
+atlas = ExtResource("2_cvnh3")
+region = Rect2(0, 0, 570, 570)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5f4fd"]
+atlas = ExtResource("2_cvnh3")
+region = Rect2(570, 0, 570, 570)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yr6xv"]
+atlas = ExtResource("2_cvnh3")
+region = Rect2(1140, 0, 570, 570)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ou2im"]
+atlas = ExtResource("2_cvnh3")
+region = Rect2(1710, 0, 570, 570)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y5tuo"]
+atlas = ExtResource("2_cvnh3")
+region = Rect2(0, 570, 570, 570)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7tu85"]
+atlas = ExtResource("2_cvnh3")
+region = Rect2(570, 570, 570, 570)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wspac"]
+atlas = ExtResource("2_cvnh3")
+region = Rect2(1140, 570, 570, 570)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8yp6v"]
+atlas = ExtResource("2_cvnh3")
+region = Rect2(1710, 570, 570, 570)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p2e6s"]
+atlas = ExtResource("2_cvnh3")
+region = Rect2(0, 1140, 570, 570)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_48fcb"]
+atlas = ExtResource("2_cvnh3")
+region = Rect2(570, 1140, 570, 570)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4p27f"]
+atlas = ExtResource("2_cvnh3")
+region = Rect2(1140, 1140, 570, 570)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ki3ha"]
+animations = [{
+"frames": [{
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_f5bca")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5f4fd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yr6xv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ou2im")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y5tuo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7tu85")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wspac")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8yp6v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p2e6s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_48fcb")
+}, {
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_4p27f")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="truth ending" type="Node2D"]
+script = ExtResource("1_aa73v")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(312, 144)
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_ki3ha")
+frame = 10
+frame_progress = 1.0
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "ENDING 1: You told him the
+truth and he blew up all
+the evidence. Your probably
+fired now.
+"
+label_settings = ExtResource("3_mwse5")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 235.0
+offset_top = 201.0
+offset_right = 373.0
+offset_bottom = 232.0
+theme = ExtResource("4_kxite")
+text = "Return to menu?"
+
+[node name="fade in" parent="." instance=ExtResource("5_00035")]
+z_index = 2
+position = Vector2(304, 66)
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

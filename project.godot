@@ -10,10 +10,10 @@ config_version=5
 
 [application]
 
-config/name="Godot 4 Project Template"
+config/name="FISHERGAMEJAM"
 run/main_scene="res://Menus/MainMenu/main_menu.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
-config/icon="res://Resources/Sprites/icon.svg"
+config/icon="res://using sprites/fail screen real omg.png"
 
 [audio]
 
@@ -25,6 +25,7 @@ GlobalVariables="*res://Autoloads/GlobalVariables.gd"
 SettingsManager="*res://Autoloads/SettingsManager.gd"
 AudioManager="*res://Autoloads/AudioManager.gd"
 SaveManager="*res://Autoloads/SaveManager.gd"
+Music="*res://music.tscn"
 
 [display]
 
@@ -45,4 +46,5 @@ ui_end={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"

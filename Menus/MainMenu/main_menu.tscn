@@ -1,28 +1,32 @@
-[gd_scene load_steps=9 format=3 uid="uid://c4nalordjijrh"]
+[gd_scene load_steps=7 format=3 uid="uid://c4nalordjijrh"]
 
 [ext_resource type="Script" path="res://Menus/MainMenu/main_menu.gd" id="1_2ya0w"]
-[ext_resource type="Texture2D" uid="uid://cdwckr7ur4c6c" path="res://Resources/Sprites/icon.svg" id="2_gsih0"]
 [ext_resource type="FontFile" uid="uid://ktvsr73aivf6" path="res://Fonts/vcr_osd_mono/VCR_OSD_MONO_1.001.ttf" id="2_mmago"]
-[ext_resource type="StyleBox" uid="uid://c2nqiwudvaseb" path="res://Resources/Styles/Standard Button/standard_button_normal_style.tres" id="3_o7gka"]
-[ext_resource type="StyleBox" uid="uid://doq33mqbb3i7r" path="res://Resources/Styles/Standard Button/standard_button_hover_style.tres" id="4_mxkqu"]
-[ext_resource type="LabelSettings" uid="uid://nn2eowlcwvi7" path="res://Fonts/pixelft12.tres" id="4_ueu5n"]
-[ext_resource type="StyleBox" uid="uid://dd6kvr76jafiq" path="res://Resources/Styles/Standard Button/standard_button_pressed_style.tres" id="5_virqm"]
+[ext_resource type="Theme" uid="uid://dmlvt74ivoho2" path="res://Fonts/buttontheme.tres" id="3_7py5q"]
+[ext_resource type="Texture2D" uid="uid://b7ebgc17u3xx1" path="res://using sprites/wait ending.png" id="4_hba0j"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_pghv5"]
 font = ExtResource("2_mmago")
 font_size = 30
 
+[sub_resource type="LabelSettings" id="LabelSettings_nuxgi"]
+font = ExtResource("2_mmago")
+font_size = 38
+
 [node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 0
+offset_left = -1.0
+offset_right = -1.0
 script = ExtResource("1_2ya0w")
 
 [node name="GodotLabel" type="Label" parent="."]
+texture_filter = 1
 layout_mode = 0
-offset_left = 123.0
-offset_top = 29.0
-offset_right = 461.0
-offset_bottom = 120.0
+offset_left = 178.0
+offset_top = -10.0
+offset_right = 457.0
+offset_bottom = 57.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 8
@@ -31,34 +35,28 @@ text = "Operation:"
 label_settings = SubResource("LabelSettings_pghv5")
 vertical_alignment = 1
 
-[node name="Icon" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = 19.0
-offset_top = 32.0
-offset_right = 147.0
-offset_bottom = 160.0
-scale = Vector2(0.7, 0.7)
-texture = ExtResource("2_gsih0")
-
 [node name="ProjectTemplateLabel" type="Label" parent="."]
+texture_filter = 1
 layout_mode = 0
-offset_left = 141.0
-offset_top = 93.0
-offset_right = 489.0
-offset_bottom = 149.0
+offset_left = 179.0
+offset_top = 33.0
+offset_right = 527.0
+offset_bottom = 87.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 2
 theme_override_font_sizes/font_size = 32
 text = "Catfish(ing)"
-label_settings = ExtResource("4_ueu5n")
+label_settings = SubResource("LabelSettings_nuxgi")
 vertical_alignment = 1
 
 [node name="MadeByLabel" type="Label" parent="."]
+texture_filter = 1
 layout_mode = 0
-offset_top = 154.0
-offset_right = 641.0
-offset_bottom = 178.0
+offset_left = -5.0
+offset_top = 82.0
+offset_right = 636.0
+offset_bottom = 106.0
 theme_override_colors/font_color = Color(0.129412, 0.145098, 0.196078, 1)
 theme_override_font_sizes/font_size = 12
 text = "made by krishthedish and adi_dev"
@@ -67,48 +65,54 @@ vertical_alignment = 1
 
 [node name="Buttons" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 263.0
-offset_top = 207.0
-offset_right = 391.0
-offset_bottom = 318.0
+offset_left = 246.0
+offset_top = 107.0
+offset_right = 374.0
+offset_bottom = 230.0
+scale = Vector2(0.8, 0.8)
 pivot_offset = Vector2(64, 0)
 theme_override_constants/separation = 12
 
 [node name="StartButton" type="Button" parent="Buttons"]
+texture_filter = 1
 layout_mode = 2
+theme = ExtResource("3_7py5q")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_styles/normal = ExtResource("3_o7gka")
-theme_override_styles/hover = ExtResource("4_mxkqu")
-theme_override_styles/pressed = ExtResource("5_virqm")
 text = "START"
 
 [node name="SettingsButton" type="Button" parent="Buttons"]
+texture_filter = 1
 layout_mode = 2
+theme = ExtResource("3_7py5q")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_styles/normal = ExtResource("3_o7gka")
-theme_override_styles/hover = ExtResource("4_mxkqu")
-theme_override_styles/pressed = ExtResource("5_virqm")
 text = "SETTINGS"
 
 [node name="QuitButton" type="Button" parent="Buttons"]
+texture_filter = 1
 layout_mode = 2
+theme = ExtResource("3_7py5q")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_styles/normal = ExtResource("3_o7gka")
-theme_override_styles/hover = ExtResource("4_mxkqu")
-theme_override_styles/pressed = ExtResource("5_virqm")
 text = "QUIT"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(294, 144)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("4_hba0j")
+region_enabled = true
+region_rect = Rect2(0, 8, 552, 560)
 
 [connection signal="pressed" from="Buttons/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="Buttons/SettingsButton" to="." method="_on_settings_button_pressed"]

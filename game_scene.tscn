@@ -1,12 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://d1exly1cbo10v"]
+[gd_scene load_steps=7 format=3 uid="uid://d1exly1cbo10v"]
 
 [ext_resource type="Script" path="res://game_scene.gd" id="1_e010t"]
 [ext_resource type="Script" path="res://story_text.gd" id="2_18y36"]
 [ext_resource type="FontFile" uid="uid://ktvsr73aivf6" path="res://Fonts/vcr_osd_mono/VCR_OSD_MONO_1.001.ttf" id="3_ymh6t"]
+[ext_resource type="Texture2D" uid="uid://bbxm8xl3slodf" path="res://using sprites/tan color.jpg" id="4_lgcc0"]
+[ext_resource type="Theme" uid="uid://dmlvt74ivoho2" path="res://Fonts/buttontheme.tres" id="5_qbp5q"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_dbbru"]
 font = ExtResource("3_ymh6t")
 font_size = 15
+font_color = Color(0, 0, 0, 1)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_e010t")
@@ -15,6 +18,11 @@ script = ExtResource("1_e010t")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 script = ExtResource("2_18y36")
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground"]
+position = Vector2(143, 147)
+scale = Vector2(5.20322, 1.44)
+texture = ExtResource("4_lgcc0")
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground"]
 
@@ -47,10 +55,12 @@ offset_left = 538.0
 offset_top = 8.0
 offset_right = 632.0
 offset_bottom = 39.0
-text = "Skip?"
+theme = ExtResource("5_qbp5q")
+text = "Start"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
 [node name="next_char" type="Timer" parent="."]
 
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="timeout" from="next_char" to="ParallaxBackground" method="_on_next_char_timeout"]

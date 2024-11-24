@@ -1,9 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dnc6gtuwi4ulj"]
+[gd_scene load_steps=3 format=3 uid="uid://dnc6gtuwi4ulj"]
 
 [ext_resource type="Script" path="res://Menus/PauseMenu/pause_menu.gd" id="1_bc7pg"]
-[ext_resource type="StyleBox" uid="uid://c2nqiwudvaseb" path="res://Resources/Styles/Standard Button/standard_button_normal_style.tres" id="2_sf1al"]
-[ext_resource type="StyleBox" uid="uid://doq33mqbb3i7r" path="res://Resources/Styles/Standard Button/standard_button_hover_style.tres" id="3_203y2"]
-[ext_resource type="StyleBox" uid="uid://dd6kvr76jafiq" path="res://Resources/Styles/Standard Button/standard_button_pressed_style.tres" id="4_cw72h"]
+[ext_resource type="Theme" uid="uid://dmlvt74ivoho2" path="res://Fonts/buttontheme.tres" id="2_rop5x"]
 
 [node name="PauseMenu" type="Control"]
 process_mode = 3
@@ -48,23 +46,17 @@ offset_bottom = 227.0
 
 [node name="ResumeButton" type="Button" parent="Buttons"]
 layout_mode = 2
-theme_override_styles/normal = ExtResource("2_sf1al")
-theme_override_styles/hover = ExtResource("3_203y2")
-theme_override_styles/pressed = ExtResource("4_cw72h")
+theme = ExtResource("2_rop5x")
 text = "RESUME"
 
 [node name="SettingsButton" type="Button" parent="Buttons"]
 layout_mode = 2
-theme_override_styles/normal = ExtResource("2_sf1al")
-theme_override_styles/hover = ExtResource("3_203y2")
-theme_override_styles/pressed = ExtResource("4_cw72h")
+theme = ExtResource("2_rop5x")
 text = "SETTINGS"
 
 [node name="QuitButton" type="Button" parent="Buttons"]
 layout_mode = 2
-theme_override_styles/normal = ExtResource("2_sf1al")
-theme_override_styles/hover = ExtResource("3_203y2")
-theme_override_styles/pressed = ExtResource("4_cw72h")
+theme = ExtResource("2_rop5x")
 text = "QUIT"
 
 [connection signal="pressed" from="Buttons/ResumeButton" to="." method="_on_resume_button_pressed"]
