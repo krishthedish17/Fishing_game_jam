@@ -13,7 +13,7 @@ config_version=5
 config/name="FISHERGAMEJAM"
 run/main_scene="res://Menus/MainMenu/main_menu.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
-config/icon="res://Resources/Sprites/icon.svg"
+config/icon="res://using sprites/fail screen real omg.png"
 
 [audio]
 
